@@ -1,0 +1,41 @@
+.centro
+    .pokemon_ask
+        @apply container mx-auto
+        form
+            @apply flex flex-col gap-4 p-8
+            @apply max-w-[600px] mx-auto my-4 p-4 bg-slate-300
+            .form_control
+                @apply flex flex-col gap-4
+                label
+                    @apply font-bold
+                input
+                    @apply input w-full
+            .form_control_buttons
+                @apply flex gap-4
+                button
+                    @apply btn btn-primary
+                    &[type="reset"]
+                        @apply btn-outline
+        
+        .pokemon_response
+            @apply flex flex-col justify-center items-center gap-4
+            .pokemon_response_name
+                @apply uppercase font-bold text-lg
+            // .pokemon_response_picture
+            .pokemon_response_abilities
+                @apply flex justify-center gap-4
+                .pokemon_response_ability
+                    @apply btn btn-secondary
+
+        .pokemon_error
+            @apply hidden w-full
+            &.opened
+                @apply alert alert-error w-full
+                @apply flex max-w-[500px] justify-center items-center mx-auto
+                @apply text-lg 
+        
+        .loading
+            @apply fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 text-white
+            @apply hidden
+            &.opened
+                @apply flex 
